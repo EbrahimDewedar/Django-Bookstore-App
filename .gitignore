@@ -1,0 +1,22 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+task-env/
+
+# SQLite database files
+*.sqlite3
+db.sqlite3
+
+# Environment variables and logs
+.env
+*.log
+
+# VS Code and system files (optional but recommended)
+.vscode/
+.DS_Store

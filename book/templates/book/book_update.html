@@ -1,0 +1,18 @@
+{% extends 'main/base_layout.html' %}
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="text-start col-12">
+            <form method="post" action="{% url 'book:book-create' %}" enctype="multipart/form-data">
+                {{ form.as_p }}
+                {% csrf_token %}
+
+                <button class="btn btn-outline-success" type="submit">save</button>
+                <a class="btn btn-outline-danger" href="{% url 'home:home-index' %}">cancel 2 HOME</a>
+                <a class="btn btn-outline-danger" href="{% url 'book:book-index' %}">cancel 2 BOOKS</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

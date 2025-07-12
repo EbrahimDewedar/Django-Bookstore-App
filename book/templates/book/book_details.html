@@ -1,0 +1,27 @@
+{% extends 'main/base_layout.html' %}
+
+{% block main-content %}
+<div class="d-flex justify-content-center mt-5">
+  <div class="card shadow-sm border-0 rounded-4" style="width: 22rem;">
+    <div class="card-body bg-dark text-white">
+      <h4 class="card-title fw-bold">{{ book }}</h4>
+      <p class="card-subtitle mb-3 text-light">{{ book.description }}</p>
+
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item bg-dark text-light border-0">
+          👍 Likes: {{ book.rate }}
+        </li>
+        <li class="list-group-item bg-dark text-light border-0">
+          👁️ Views: {{ book.views }}
+        </li>
+      </ul>
+
+      <div class="d-flex flex-wrap gap-2">
+        <a href="{% url 'home:home-index' %}" class="btn btn-outline-light btn-sm">🏠 Home</a>
+        <a href="{% url 'book:book-index' %}" class="btn btn-outline-light btn-sm">📚 Books</a>
+        <a href="{% url 'book:book-create' %}" class="btn btn-warning btn-sm">➕ Add Book</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
